@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <vector>
 #include <algorithm>
+#include <cmath>
 
 std::vector<int> Icurrentreadings::sortCurrentSamples(std::vector<int>& samples) {
 	sort(samples.begin(), samples.end());
