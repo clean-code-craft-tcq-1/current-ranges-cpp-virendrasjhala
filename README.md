@@ -52,5 +52,6 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 
 Implement one failing test and at least one passing test:
 
-- _enter the name of a **passing** test
-- _enter the name of a **failing** test
+**failing** test : only calling function -> sortCurrentSamples(currentSamples);
+				    no definition fot the function.
+**passing** test : provided definition for the above funtion with return bool.
