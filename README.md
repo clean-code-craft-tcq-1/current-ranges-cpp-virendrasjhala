@@ -54,4 +54,4 @@ Implement one failing test and at least one passing test:
 
 **failing** test : only calling function -> sortCurrentSamples(currentSamples);
 				    no definition fot the function.
-**passing** test : provided definition for the above funtion with return bool.
+**passing** test : provided definition for the above funtion with return vector.
