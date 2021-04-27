@@ -14,7 +14,7 @@ TEST_CASE(" detect the ranges and readings in each range") {
 	auto const expectedSortedSamples = { 3, 3, 4, 5, 10, 11, 12 };
 	std::vector<int> sortedSamples = currentreadings.sortCurrentSamples(currentSamples);
 	REQUIRE(std::equal(begin(sortedSamples), end(sortedSamples), begin(expectedSortedSamples), end(expectedSortedSamples)));
-
+	
 	/*count to frequency to add later*/
 	std::map<int, int > frequecyHandler;
 	frequecyHandler = currentreadings.countFrequency(sortedSamples);
@@ -25,7 +25,6 @@ TEST_CASE(" detect the ranges and readings in each range") {
 
 	/*detect range and readings*/
 	currentreadings.detectRange(continuousReadings, frequecyHandler);
-
 }
 
 	
