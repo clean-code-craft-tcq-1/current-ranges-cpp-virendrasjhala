@@ -41,6 +41,6 @@ void Icurrentreadings::detectRange(std::vector<int>& continuousReadings, std::ma
 	int numberOfReadings2 = checkReading.readingFromRange(highRange, frequecyHandler);
 
 	std::cout << "range" << " " << "readings"<<"\n";
-	std::cout << lowRange.front() << "-" << lowRange.back() << " "<< numberOfReadings1<<"\n";
-	std::cout << highRange.front() << "-" << highRange.back() << " " << numberOfReadings2<<"\n";
+	std::cout << lowRange.front() << "-" << lowRange.back() << ", "<< numberOfReadings1<<"\n";
+	std::cout << highRange.front() << "-" << highRange.back() << ", " << numberOfReadings2<<"\n";
 }
