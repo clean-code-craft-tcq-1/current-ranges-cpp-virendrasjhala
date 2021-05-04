@@ -29,6 +29,10 @@ TEST_CASE(" detect the ranges and readings in each range") {
 	actualDetectedReading = currentreadings.detectRange(continuousReadings, frequecyHandler);
 	REQUIRE(actualDetectedReading["lowRangeReading"] == predictedReading[0]);
 	REQUIRE(actualDetectedReading["highRangeReading"] == predictedReading[1]);
+
+	std::cout << "Range" << " " << "Readings" << "\n";
+	std::cout << actualDetectedReading["lowRangeLow"] << " - " << actualDetectedReading["lowRangeHigh"] << ", " << actualDetectedReading["lowRangeReading"]<<"\n";
+	std::cout << actualDetectedReading["highRangeLow"] << " - " << actualDetectedReading["highRangeHigh"] << ", " << actualDetectedReading["highRangeReading"]<<"\n";
 }
 
 	
