@@ -45,8 +45,8 @@ std::map<std::string, int>  Icurrentreadings::detectRange(std::vector<int>& cont
 	detectedrange["lowRangeHigh"] = lowRange.back();
 	detectedrange["lowRangeReading"] = numberOfReadings1;
 
-	detectedrange["highRangeLow"] = lowRange.front();
-	detectedrange["highRangeHigh"] = lowRange.back();
+	detectedrange["highRangeLow"] = highRange.front();
+	detectedrange["highRangeHigh"] = highRange.back();
 	detectedrange["highRangeReading"] = numberOfReadings2;
 
 	return detectedrange;
