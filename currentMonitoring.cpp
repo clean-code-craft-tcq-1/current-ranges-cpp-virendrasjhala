@@ -31,7 +31,7 @@ int Icurrentreadings::readingFromRange(std::vector<int>& checkReadings, std::map
 	}
 	return temp;
 }
-void Icurrentreadings::detectRange(std::vector<int>& continuousReadings, std::map<int, int > frequecyHandler) {
+std::map<std::string, int>  Icurrentreadings::detectRange(std::vector<int>& continuousReadings, std::map<int, int > frequecyHandler) {
 	Icurrentreadings checkReading;
 	int half_size = ceil(continuousReadings.size() / 2);
 	std::vector<int> lowRange(continuousReadings.begin(), continuousReadings.begin() + half_size);
@@ -40,7 +40,14 @@ void Icurrentreadings::detectRange(std::vector<int>& continuousReadings, std::ma
 	int numberOfReadings1 = checkReading.readingFromRange(lowRange, frequecyHandler);
 	int numberOfReadings2 = checkReading.readingFromRange(highRange, frequecyHandler);
 
-	std::cout << "range" << " " << "readings"<<"\n";
-	std::cout << lowRange.front() << "-" << lowRange.back() << ", "<< numberOfReadings1<<"\n";
-	std::cout << highRange.front() << "-" << highRange.back() << ", " << numberOfReadings2<<"\n";
+	std::map<std::string, int> detectedrange;
+	detectedrange["lowRangeLow"] = lowRange.front();
+	detectedrange["lowRangeHigh"] = lowRange.back();
+	detectedrange["lowRangeReading"] = numberOfReadings1;
+
+	detectedrange["highRangeLow"] = lowRange.front();
+	detectedrange["highRangeHigh"] = lowRange.back();
+	detectedrange["highRangeReading"] = numberOfReadings2;
+
+	return detectedrange;
 }

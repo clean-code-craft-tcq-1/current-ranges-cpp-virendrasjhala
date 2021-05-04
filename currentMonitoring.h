@@ -17,6 +17,6 @@ public:
 	 std::vector<int> sortCurrentSamples(std::vector<int>& samples);
 	 std::vector<int> removeDuplicateFromCurrentSamples(std::vector<int>& samplesSamples);
 	 std::map<int, int > countFrequency(std::vector<int>& samples);
-	 void detectRange(std::vector<int>& continuousReadings, std::map<int, int > frequecyHandler);
+	 std::map<std::string, int>  detectRange(std::vector<int>& continuousReadings, std::map<int, int > frequecyHandler);
 	 int readingFromRange(std::vector<int>& checkReadings, std::map<int, int > frequecyHandler);
 };
